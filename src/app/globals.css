@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Cal+Sans:wght@400;700&display=swap');
 
 :root {
   --background: #ffffff;
@@ -8,7 +9,7 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: 'Cal Sans', sans-serif; /* Updated font */
   --font-mono: var(--font-geist-mono);
 }
 
@@ -20,7 +21,8 @@
 }
 
 body {
-  background: var(--background);
+  background: url('/images/BACKGROUND.png') no-repeat center center fixed;
+  background-size: cover;
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
 }

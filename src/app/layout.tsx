@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Where are you BASEd? Meme Generator",
+  title: "Where are you BASEd?",
   description: "Create and share memes with ease.",
   openGraph: {
     images: [

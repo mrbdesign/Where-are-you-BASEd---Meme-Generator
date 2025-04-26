@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Where are you BASEd? Meme Generator",
-  description: "Create and share memes with Farcaster Frame compatibility.",
+  description: "Create and share memes with ease.",
   openGraph: {
     images: [
       {
@@ -23,10 +23,6 @@ export const metadata: Metadata = {
         height: 630,
       },
     ],
-  },
-  other: {
-    "fc:frame": "vNext",
-    "fc:frame:image": "http://localhost:3000/preview-image.png",
   },
 };
 
@@ -40,16 +36,6 @@ export default function RootLayout({
       <head>
         {/* Favicon */}
         <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
-
-        {/* Farcaster Frame Meta Tags */}
-        <meta property="fc:frame" content="vNext" />
-        <meta
-          property="fc:frame:image"
-          content="http://localhost:3000/preview-image.png"
-        />
-        <meta
-          property="og:image"
-          content="http://localhost:3000/fallback-preview.png" />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {children}

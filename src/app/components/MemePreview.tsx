@@ -1,6 +1,5 @@
-'use client';
-
-import { forwardRef } from 'react';
+import { forwardRef } from "react";
+import Image from "next/image"; // Import Next.js Image component
 
 interface MemePreviewProps {
   location: string;
@@ -11,21 +10,17 @@ const MemePreview = forwardRef<HTMLDivElement, MemePreviewProps>(
     return (
       <div
         ref={ref}
-        className="relative w-full aspect-[4/3] bg-white rounded-lg overflow-hidden flex flex-col items-center justify-start"
+        className="relative w-full aspect-[4/3] bg-white rounded-lg overflow-hidden"
       >
-        {/* HELLO.png Image */}
-        <img
+        <Image
           src="/images/HELLO.png"
           alt="HELLO"
-          className="w-full object-cover"
+          layout="fill"
+          objectFit="cover"
         />
-
-        {/* Location Text */}
-        <div className="absolute" style={{ bottom: '60px', textAlign: 'center', width: '100%' }}>
-          <p
-            className="text-3xl font-bold text-black"
-            style={{ fontFamily: "'Cal Sans', sans-serif" }}
-          >
+        {/* Center the location text on the white portion */}
+        <div className="absolute top-[70%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center w-full">
+          <p className="text-5xl font-bold text-black">
             {location || "Location"}
           </p>
         </div>
@@ -33,5 +28,8 @@ const MemePreview = forwardRef<HTMLDivElement, MemePreviewProps>(
     );
   }
 );
+
+// Add displayName to avoid ESLint error
+MemePreview.displayName = "MemePreview";
 
 export default MemePreview;

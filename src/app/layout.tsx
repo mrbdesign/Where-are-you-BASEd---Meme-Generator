@@ -1,5 +1,4 @@
-import type { Metadata } from "next";
-import Head from "next/head";
+// filepath: /Users/mr.briandesign/Where-are-you-BASEd---Meme-Generator/src/app/layout.tsx
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -13,7 +12,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
+export const metadata = {
   title: "Where are you BASEd?",
   description: "Create and share memes with ease.",
   openGraph: {
@@ -46,26 +45,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Head>
-        {/* Favicon */}
-        <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
-
-        {/* Open Graph Meta Tags */}
-        <meta property="og:title" content="Where are you BASEd?" />
-        <meta property="og:description" content="Create and share memes with ease." />
-        <meta property="og:url" content="https://www.basedwhere.world" />
-        <meta property="og:site_name" content="Where are you BASEd?" />
-        <meta property="og:image" content="https://www.basedwhere.world/images/Card-Image.png" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-        <meta property="og:type" content="website" />
-
-        {/* Twitter Card Meta Tags */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Where are you BASEd?" />
-        <meta name="twitter:description" content="Create and share memes with ease." />
-        <meta name="twitter:image" content="https://www.basedwhere.world/images/Card-Image.png" />
-      </Head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {children}
         {/* Footer */}

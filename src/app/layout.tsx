@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Head from "next/head";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -45,7 +46,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
+      <Head>
         {/* Favicon */}
         <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
 
@@ -64,7 +65,7 @@ export default function RootLayout({
         <meta name="twitter:title" content="Where are you BASEd?" />
         <meta name="twitter:description" content="Create and share memes with ease." />
         <meta name="twitter:image" content="https://www.basedwhere.world/images/Card-Image.png" />
-      </head>
+      </Head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {children}
         {/* Footer */}

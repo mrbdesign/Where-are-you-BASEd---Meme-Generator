@@ -1,11 +1,10 @@
 "use client";
 import { ReactNode, useEffect } from "react";
-import { Farcaster } from "@farcaster/sdk";
+import frame from "@farcaster/frame-sdk";
 
 export default function FarcasterProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
-    const farcaster = new Farcaster();
-    farcaster.ready();
+    frame.actions.ready();
   }, []);
 
   return <>{children}</>;
